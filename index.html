@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro - Heitor </title>
+</head>
+<body>
+    <h1>Sistema Financeiro</h1>
+    <form id="recordForm" action="">
+        <input type="text" id="Description" placeholder="Descrição" required>
+        <input type="number" id="Value" placeholder="Valor" required>
+        <select id="Type">
+            <option value="income">Receita</option>
+            <option value="Expense">Despesa</option>
+        </select>
+        <button type="submit">Adicionar</button>
+    </form>
+    <h2>Lançamentos</h2>
+    <ul id="recordsList"></ul>
+
+    <h2>Totais</h2>
+    <p>Total Diária: <span id="DailySum"> R$ 0,00 </span></p>
+    <p>Total Geral:  <span id="TotalSum"> R$ 0,00 </span> </p>
+    
+</body>
+</html>
