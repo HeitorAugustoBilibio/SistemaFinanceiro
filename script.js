@@ -37,8 +37,17 @@ async function refresh(){
         li.textContent = `${date} - ${desc} : R$ ${value.toFixed(2).replace('.', ',')} - (${recordtype})`
         list.appendChild(li);
 
-
+        if(recordtype === 'Income'){
+            totalG += value;
+            if(date === today) totalD += value;
+        } else {
+            totalG -= value;
+            if(date === today) totalD -= value
+        }
     });
+
+    totalDaily.textContent = `R$ ${totalD.toFixed(2)}`;
+    total.textContent = `R$ ${totalG.toFixed(2)}`;
 }
 
 refresh();
